@@ -1,0 +1,12 @@
+
+*.class
+target/classes/application-local.properties
+src/.DS_Store
+src/main/.DS_Store
+src/main/java/.DS_Store
+target/classes/application.properties
+target/classes/META-INF/MANIFEST.MF
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
