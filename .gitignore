@@ -10,3 +10,7 @@ target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.l
 target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+target/surefire-reports/TEST-com.dineshchand.cache.springbootredis.SpringbootRedisApplicationTests.xml
+target/surefire-reports/com.dineshchand.cache.springbootredis.SpringbootRedisApplicationTests.txt
+target/.DS_Store
+.DS_Store

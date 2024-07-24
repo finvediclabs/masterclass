@@ -19,7 +19,9 @@ import java.time.Instant;
 @Table(name = "order_details")
 public class Order implements Serializable{
 
-    @Id
+    private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 

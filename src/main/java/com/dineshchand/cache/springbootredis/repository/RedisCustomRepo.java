@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
 
 import com.dineshchand.cache.springbootredis.entity.Order;
@@ -23,7 +24,16 @@ public class RedisCustomRepo {
 		this.hashOperations = this.redisTemplate.opsForHash();
 	}
 
+	
+	public Integer increment() {
+		ValueOperations<String, Integer> ops = (ValueOperations<String, Integer>) redisTemplate.opsForValue();
+		Long l = ops.increment("prodid", 1);
+		return l.intValue();
+	}
+	
 	public void save(OrderRequest orderRequest) {
+		Integer prodId = increment();
+		orderRequest.setProductId(prodId);
 		Order order = Order.builder().amount(orderRequest.getTotalAmount()).orderStatus("CREATED")
 				.productId(orderRequest.getProductId()).orderDate(Instant.now()).quantity(orderRequest.getQuantity())
 				.build();
